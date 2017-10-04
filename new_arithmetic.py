@@ -38,9 +38,10 @@ def square(nums):
     return nums
 
 def cube(num1):
-    """Return the cube of the input."""
-
-    return num1 ** 3
+    """Return the cube of the input(s)."""
+    for i, num in enumerate(nums):
+        nums[i] = num ** 3
+    return nums
 
 def power(num1, num2):
     """Raise num1 to the power of num2 and return the value."""
