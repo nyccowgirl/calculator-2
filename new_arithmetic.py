@@ -37,21 +37,25 @@ def square(nums):
         nums[i] = num ** 2
     return nums
 
-def cube(num1):
+def cube(nums):
     """Return the cube of the input(s)."""
     for i, num in enumerate(nums):
         nums[i] = num ** 3
     return nums
 
-def power(num1, num2):
-    """Raise num1 to the power of num2 and return the value."""
+def power(nums):
+    """Raise total to the power of the next number, and return the value."""
+    total = float(nums[0])
+    for num in nums[1:]:
+        total **= num
+    return total
 
-    return num1 ** num2
-
-def mod(num1, num2):
-    """Return the remainder of num1 / num2."""
-
-    return num1 % num2
+def mod(nums):
+    """Return the remainder of each input divisible by the following input."""
+    total = float(nums[0])
+    for num in nums[1:]:
+        total %= num
+    return total
 
 def add_mult(num1, num2, num3):
     """ Return the sum of two inputs, and multiplies it with a third input."""
